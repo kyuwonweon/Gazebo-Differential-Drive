@@ -1,5 +1,5 @@
 <sdf version='1.12'>
-  <world name='empty'>
+  <world name='ddrive'>
     <physics name='1ms' type='ignored'>
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1</real_time_factor>
@@ -67,14 +67,39 @@
       <self_collide>false</self_collide>
     </model>
     <include>
-      <uri>model:///turtle_inv</uri>
-      <name>turtle_inv</name>
-      <pose>2.6503627996837302 -2.8760094783977133 0 0 0 0</pose>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Asphalt Plane</uri>
+      <name>asphalt_plane</name>
+      <pose>0.050537716462253357 0.12327838574946615 0 0 0 0</pose>
     </include>
     <include>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Pallet_Standard</uri>
-      <name>Pallet_Standard</name>
-      <pose>2.2557921085316615 -1.4732823939808795 0 0 0 0</pose>
+      <uri>model:///jersey_barrier</uri>
+      <name>jersey_barrier</name>
+      <pose>-0.10023939168152118 5.3046104350010133 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>model:///jersey_barrier</uri>
+      <name>jersey_barrier_1</name>
+      <pose>0.08552165206313056 -5.4120090095799425 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Cardboard box</uri>
+      <name>cardboard_box</name>
+      <pose>4.6135841155193358 7.4375149242019072 0.14999999999999999 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Cardboard box</uri>
+      <name>cardboard_box_0</name>
+      <pose>-5.4189671564510338 6.1995753333240593 0.14999999999999999 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Rescue Randy Sitting</uri>
+      <name>rescue_randy_sitting</name>
+      <pose>-1.877716345913317 2.5208831198169008 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Gazebo</uri>
+      <name>gazebo</name>
+      <pose>-5.8980800399851177 -3.6613727632168933 0 0 0 0</pose>
     </include>
     <light name='sun' type='directional'>
       <pose>0 0 10 0 0 0</pose>

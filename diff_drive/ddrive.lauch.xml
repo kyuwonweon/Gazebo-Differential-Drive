@@ -2,15 +2,15 @@
 <launch>
   <arg name="use_gui" default="True" description="Run the gazebo gui" />
   <gz_server
-      world_sdf_string="example_world"
-      world_sdf_file="example.world.sdf"
-      create_own_container="True"
+      world_sdf_string="ddrive_world"
+      world_sdf_file="ddrive.world.sdf"
+      create_own_container= "True"
       use_composition="True" />
 
   <gz_spawn_model
       world=""
       file=""
-      model_string="$(command '$(exec-in-pkg xacro xacro) $(find-pkg-share ros_gz_sim_demos)/models/rrbot.xacro')"
+      model_string="$(command '$(exec-in-pkg xacro xacro) $(find-pkg-share diff_drive)/models/rrbot.xacro')"
       topic=""
       entity_name=""
       allow_renaming="False"
@@ -23,7 +23,7 @@
 
   <gz_spawn_model
       world=""
-      file="$(find-pkg-share ros_gz_sim_demos)/models/vehicle/model.sdf"
+      file="$(find-pkg-share ros_gz_sim_demos)/models/jersey_barrier/model.sdf"
       model_string=""
       topic=""
       entity_name=""
