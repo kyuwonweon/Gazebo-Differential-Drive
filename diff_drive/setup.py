@@ -30,6 +30,7 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name, ['env-hooks/diff_drive.dsv']),
+        ('share/' + package_name, ['flip.py']),
         *recursive_files('share/' + package_name, 'models'),
         *recursive_files('share/' + package_name, 'worlds'),
         *recursive_files('share/' + package_name, 'launch'),

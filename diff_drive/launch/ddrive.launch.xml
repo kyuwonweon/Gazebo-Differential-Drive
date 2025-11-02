@@ -6,12 +6,13 @@
       world_sdf_file="ddrive.world.sdf"
       create_own_container="True"
       use_composition="True" />
-  <executable cmd="gz sim -g" if="$(var use_gui)" on_exit="shutdown" />
+
+  <include file="$(find-pkg-share diff_drive)/launch/ddrive_rviz.launch.xml"/>
 
   <gz_spawn_model
       world=""
       file=""
-      model_string="$(command '$(exec-in-pkg xacro xacro) $(find-pkg-share diff_drive)/urdf/ddrive.gazebo.xacro')"
+      model_string="$(command '$(exec-in-pkg xacro xacro) $(find-pkg-share diff_drive)/urdf/ddrive.urdf.xacro gazebo:=true')"
       topic=""
       entity_name=""
       allow_renaming="False"
@@ -22,4 +23,9 @@
       pitch=""
       yaw="" />
 
+  <node pkg="ros_gz_bridge" exec="parameter_bridge">
+      <param name="config_file" value="$(find-pkg-share diff_drive)/config/bridge.yaml"/>
+  </node>
+
+  <executable cmd="gz sim -g" if="$(var use_gui)" on_exit="shutdown" />
 </launch>
