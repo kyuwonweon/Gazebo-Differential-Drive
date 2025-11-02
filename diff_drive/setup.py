@@ -33,7 +33,8 @@ setup(
         *recursive_files('share/' + package_name, 'models'),
         *recursive_files('share/' + package_name, 'worlds'),
         *recursive_files('share/' + package_name, 'launch'),
-        *recursive_files('share/' + package_name, 'urdf')
+        *recursive_files('share/' + package_name, 'urdf'),
+        *recursive_files('share/' + package_name, 'config')
     ],
     install_requires=['setuptools'],
     zip_safe=True,

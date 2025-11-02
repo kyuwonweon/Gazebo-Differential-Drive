@@ -69,37 +69,42 @@
     <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Asphalt Plane</uri>
       <name>asphalt_plane</name>
-      <pose>0.050537716462253357 0.12327838574946615 0 0 0 0</pose>
+      <pose>0 0 0 0 0 0</pose>
     </include>
     <include>
       <uri>model:///jersey_barrier</uri>
       <name>jersey_barrier</name>
-      <pose>-0.10023939168152118 5.3046104350010133 0 0 0 0</pose>
+      <pose>1 5 0 0 0 0</pose>
     </include>
     <include>
       <uri>model:///jersey_barrier</uri>
       <name>jersey_barrier_1</name>
-      <pose>0.08552165206313056 -5.4120090095799425 0 0 0 0</pose>
+      <pose>5 -5 0 0 0 0</pose>
     </include>
     <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Cardboard box</uri>
-      <name>cardboard_box</name>
-      <pose>4.6135841155193358 7.4375149242019072 0.14999999999999999 0 0 0</pose>
+      <name>cardboard_box_1</name>
+      <pose>4 7 0 0 0 0</pose>
     </include>
     <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Cardboard box</uri>
-      <name>cardboard_box_0</name>
-      <pose>-5.4189671564510338 6.1995753333240593 0.14999999999999999 0 0 0</pose>
+      <name>cardboard_box_2</name>
+      <pose>-5 6 0 0 0 0</pose>
     </include>
     <include>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Rescue Randy Sitting</uri>
-      <name>rescue_randy_sitting</name>
-      <pose>-1.877716345913317 2.5208831198169008 0 0 0 0</pose>
+      <uri>https://fuel.gazebosim.org/1.0/abmohit/models/Standing person</uri>
+      <name>standing_person</name>
+      <pose>2 -2 0 0 0 0</pose>
+      </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/platypus</uri>
+      <name>platypus</name>
+      <pose>0 -1 0 0 0 0</pose>
     </include>
     <include>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Gazebo</uri>
-      <name>gazebo</name>
-      <pose>-5.8980800399851177 -3.6613727632168933 0 0 0 0</pose>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/crocodile</uri>
+      <name>croc</name>
+      <pose> -6 6 0 0 0 0</pose>
     </include>
     <light name='sun' type='directional'>
       <pose>0 0 10 0 0 0</pose>
