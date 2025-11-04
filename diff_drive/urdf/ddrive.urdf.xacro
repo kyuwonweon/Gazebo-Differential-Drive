@@ -125,24 +125,24 @@
 <joint name="base_l_wheel_joint" type="continuous">
     <parent link="base_link"/>
     <child link="left_wheel"/>
-    <origin xyz="${length/5} ${base_size/2} -${base_size/2}" rpy="0 0 0"/>
+    <origin xyz="0 ${base_size/2+wheel_l} 0" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
 </joint>
 
 <joint name="base_r_wheel_joint" type="continuous">
     <parent link="base_link"/>
     <child link="right_wheel"/>
-    <origin xyz="${length/5} -${base_size/2} -${base_size/2}" rpy="0 0 0"/>
+    <origin xyz="0 -${base_size/2+wheel_l} 0" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
 </joint>
 
-<joint name="base_top_caster_joint" type="fixed">
+<joint name="base_top_caster_joint" type="continuous">
   <parent link="base_link"/>
   <child link="top_caster"/>
   <origin xyz="-${length/2 - 2*caster_r} 0 ${base_size/2 + caster_r}" rpy="0 0 0"/>
 </joint>
 
-<joint name="base_bottom_caster_joint" type="fixed">
+<joint name="base_bottom_caster_joint" type="continuous">
   <parent link="base_link"/>
   <child link="bottom_caster"/>
   <origin xyz="-${length/2 - 2*caster_r} 0 -${base_size/2 + caster_r}" rpy="0 0 0"/>

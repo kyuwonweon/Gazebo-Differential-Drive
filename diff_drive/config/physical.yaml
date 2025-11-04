@@ -2,6 +2,6 @@
   ros__parameters:
     base_size : 2.0
     length : 3.0
-    wheel_r : 0.5
+    wheel_r : 1.5
     wheel_l : 0.2
     caster_r : 0.25

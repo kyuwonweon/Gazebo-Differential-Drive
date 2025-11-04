@@ -17,55 +17,6 @@
       <background>0.699999988 0.699999988 0.699999988 1</background>
       <shadows>true</shadows>
     </scene>
-    <model name='ground_plane'>
-      <static>true</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>100 100</size>
-            </plane>
-          </geometry>
-          <surface>
-            <friction>
-              <ode/>
-            </friction>
-            <bounce/>
-            <contact/>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>100 100</size>
-            </plane>
-          </geometry>
-          <material>
-            <ambient>0.800000012 0.800000012 0.800000012 1</ambient>
-            <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
-            <specular>0.800000012 0.800000012 0.800000012 1</specular>
-          </material>
-        </visual>
-        <pose>0 0 0 0 0 0</pose>
-        <inertial>
-          <pose>0 0 0 0 0 0</pose>
-          <mass>1</mass>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-        </inertial>
-        <enable_wind>false</enable_wind>
-      </link>
-      <pose>0 0 0 0 0 0</pose>
-      <self_collide>false</self_collide>
-    </model>
     <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Asphalt Plane</uri>
       <name>asphalt_plane</name>
@@ -82,10 +33,20 @@
       <pose>5 -5 0 0 0 0</pose>
     </include>
     <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Cardboard box</uri>
+      <name>cardboard_box</name>
+      <pose>4.6135841155193358 7.4375149242019072 0.14999999999999999 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Cardboard box</uri>
+      <name>cardboard_box_0</name>
+      <pose>-5.4189671564510338 6.1995753333240593 0.14999999999999999 0 0 0</pose>
+    </include>
+    <include>
       <uri>https://fuel.gazebosim.org/1.0/abmohit/models/Standing person</uri>
       <name>standing_person</name>
       <pose>2 -2 0 0 0 0</pose>
-      </include>
+    </include>
     <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/platypus</uri>
       <name>platypus</name>
