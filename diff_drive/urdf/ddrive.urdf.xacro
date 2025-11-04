@@ -4,6 +4,7 @@
 <xacro:property name="yaml_file" value="$(find diff_drive)/config/physical.yaml"/>
 <xacro:property name="params" value="${xacro.load_yaml(yaml_file)}"/>
 <xacro:property name="base_size" value="${params['/**']['ros__parameters']['base_size']}"/>
+<xacro:property name="width" value="${params['/**']['ros__parameters']['width']}"/>
 <xacro:property name="length" value="${params['/**']['ros__parameters']['length']}"/>
 <xacro:property name="wheel_r" value="${params['/**']['ros__parameters']['wheel_r']}"/>
 <xacro:property name="wheel_l" value="${params['/**']['ros__parameters']['wheel_l']}"/>
@@ -17,7 +18,7 @@
 <link name="base_link">
     <visual>
         <geometry>
-            <box size="${length} ${base_size} ${base_size}"/>
+            <box size="${length} ${base_size} ${width}"/>
         </geometry>
         <material name="blue_mat">
             <color rgba="0 0 1 1"/>
@@ -25,7 +26,7 @@
     </visual>
     <collision>
         <geometry>
-            <box size="${length} ${base_size} ${base_size}"/>
+            <box size="${length} ${base_size} ${width}"/>
         </geometry>
     </collision>
     <inertial>
@@ -125,26 +126,26 @@
 <joint name="base_l_wheel_joint" type="continuous">
     <parent link="base_link"/>
     <child link="left_wheel"/>
-    <origin xyz="0 ${base_size/2+wheel_l} 0" rpy="0 0 0"/>
+    <origin xyz="${width*3/2} ${base_size/2+wheel_l} 0" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
 </joint>
 
 <joint name="base_r_wheel_joint" type="continuous">
     <parent link="base_link"/>
     <child link="right_wheel"/>
-    <origin xyz="0 -${base_size/2+wheel_l} 0" rpy="0 0 0"/>
+    <origin xyz="${width*3/2} -${base_size/2+wheel_l} 0" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
 </joint>
 
 <joint name="base_top_caster_joint" type="continuous">
   <parent link="base_link"/>
   <child link="top_caster"/>
-  <origin xyz="-${length/2 - 2*caster_r} 0 ${base_size/2 + caster_r}" rpy="0 0 0"/>
+  <origin xyz="-${length/2 - 2*caster_r} 0 ${width/2 + caster_r}" rpy="0 0 0"/>
 </joint>
 
 <joint name="base_bottom_caster_joint" type="continuous">
   <parent link="base_link"/>
   <child link="bottom_caster"/>
-  <origin xyz="-${length/2 - 2*caster_r} 0 -${base_size/2 + caster_r}" rpy="0 0 0"/>
+  <origin xyz="-${length/2 - 2*caster_r} 0 -${width/2 + caster_r}" rpy="0 0 0"/>
 </joint>
 </robot>

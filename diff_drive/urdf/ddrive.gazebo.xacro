@@ -7,6 +7,8 @@
             <wheel_separation>${base_size}</wheel_separation>
             <wheel_radius>${wheel_r}</wheel_radius>
             <topic>/model/robot/cmd_vel</topic>
+            <topic>/model/robot/tf</topic>
+            <topic>/model/robot/odom</topic>
         </plugin>
     </gazebo>
     <gazebo>
