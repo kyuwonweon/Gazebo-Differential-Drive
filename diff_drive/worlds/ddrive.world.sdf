@@ -50,7 +50,7 @@
     <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/platypus</uri>
       <name>platypus</name>
-      <pose>0 -1 0 0 0 0</pose>
+      <pose>0 -4 6 0 0 0</pose>
     </include>
     <include>
       <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/crocodile</uri>
