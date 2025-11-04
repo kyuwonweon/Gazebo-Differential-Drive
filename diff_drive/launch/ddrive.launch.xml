@@ -5,7 +5,7 @@
       world_sdf_string="ddrive"
       world_sdf_file="ddrive.world.sdf"
       create_own_container="True"
-      use_composition="True" />
+      use_composition="True"/>
 
   <include file="$(find-pkg-share diff_drive)/launch/ddrive_rviz.launch.xml"/>
 
@@ -23,9 +23,11 @@
       pitch=""
       yaw="" />
 
-  <node pkg="ros_gz_bridge" exec="parameter_bridge">
-      <param name="config_file" value="$(find-pkg-share diff_drive)/config/bridge.yaml"/>
-  </node>
+  <ros_gz_bridge
+      use_composition="True"
+      container_name="ros_gz_container"
+      bridge_name="bridge"
+      config_file="$(find-pkg-share diff_drive)/config/bridge.yaml"/>
 
   <executable cmd="gz sim -g" if="$(var use_gui)" on_exit="shutdown" />
 </launch>

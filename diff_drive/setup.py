@@ -29,8 +29,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name, ['env-hooks/diff_drive.dsv']),
-        ('share/' + package_name, ['flip.py']),
+        ('share/' + package_name + '/env-hooks', ['env-hooks/diff_drive.dsv']),
         *recursive_files('share/' + package_name, 'models'),
         *recursive_files('share/' + package_name, 'worlds'),
         *recursive_files('share/' + package_name, 'launch'),
@@ -46,6 +45,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'flip=diff_drive.flip:main'
         ],
     },
 )

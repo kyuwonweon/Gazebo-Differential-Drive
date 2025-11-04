@@ -6,9 +6,8 @@
             <right_joint>base_r_wheel_joint</right_joint>
             <wheel_separation>${base_size}</wheel_separation>
             <wheel_radius>${wheel_r}</wheel_radius>
-            <topic>/cmd_vel</topic>
-            <odom_topic>/odom</odom_topic>
-            <tf_topic>/tf</tf_topic>
+            <topic>cmd_vel</topic>
+            <odom_topic>odom</odom_topic>
         </plugin>
     </gazebo>
 
