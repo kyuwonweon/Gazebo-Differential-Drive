@@ -11,19 +11,15 @@ from rclpy.node import Node
 
 
 class Flip(Node):
-    """
-    Node to flip the car.
-
-    Publishes
-    """
+    """Node to flip the car as it moves back and forth."""
 
     def __init__(self):
         """Initialize flip node."""
         super().__init__('flip')
         # Publisher for the cmd_vel topic
         self.publisher = self.create_publisher(Twist, 'cmd_vel', 10)
-        self.drive_speed = 20.0
-        self.flip_time = 10.0
+        self.drive_speed = 3.0
+        self.flip_time = 7.0
         self.timer = self.create_timer(0.1, self.timer_callback)
         self.flip_timer = self.create_timer(self.flip_time,
                                             self.flip_callback)

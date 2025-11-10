@@ -29,7 +29,6 @@
       bridge_name="bridge"
       config_file="$(find-pkg-share diff_drive)/config/bridge.yaml"/>
 
-  <node pkg="diff_drive" exec="flip" name="flip_node"/>
-
+  <node pkg="diff_drive" exec="flip" name="flip_node"/> 
   <executable cmd="gz sim -g" if="$(var use_gui)" on_exit="shutdown" />
 </launch>
