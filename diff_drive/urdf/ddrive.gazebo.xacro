@@ -6,6 +6,8 @@
             <right_joint>base_r_wheel_joint</right_joint>
             <wheel_separation>${base_size}</wheel_separation>
             <wheel_radius>${wheel_r}</wheel_radius>
+            <frame_id>odom</frame_id>
+            <child_frame_id>base_link</child_frame_id>
             <topic>/model/robot/cmd_vel</topic>
             <topic>/model/robot/tf</topic>
             <topic>/model/robot/odom</topic>
@@ -14,9 +16,11 @@
     <gazebo>
         <plugin name="gz::sim::systems::JointStatePublisher"
                 filename="gz-sim-joint-state-publisher-system">
-            <topic>/joint_states</topic>
+            <topic>/world/ddrive/model/robot/joint_state</topic>
             <joint_name>base_l_wheel_joint</joint_name>
             <joint_name>base_r_wheel_joint</joint_name>
+            <joint_name>base_top_caster_joint</joint_name>
+            <joint_name>base_bottom_caster_joint</joint_name>
         </plugin>
     </gazebo>
 
