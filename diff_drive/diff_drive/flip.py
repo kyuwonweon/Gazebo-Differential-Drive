@@ -11,7 +11,8 @@ from rclpy.node import Node
 
 
 class Flip(Node):
-    """Node to flip the car as it moves back and forth.
+    """
+    Node to flip the car as it moves back and forth.
 
     PUBLISHES
     ----------
