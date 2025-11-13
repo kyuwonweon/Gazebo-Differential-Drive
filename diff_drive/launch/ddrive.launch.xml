@@ -1,13 +1,16 @@
 <!-- Launch the example world and spawn an example urdf file-->
 <launch>
-  <arg name="use_gui" default="True" description="Run the gazebo gui" />
+  <arg name="use_gui" default="true" description="Run the gazebo gui" />
+  <arg name="view_only" default="false"/>
   <gz_server
       world_sdf_string="ddrive"
       world_sdf_file="ddrive.world.sdf"
       create_own_container="True"
       use_composition="True"/>
 
-  <include file="$(find-pkg-share diff_drive)/launch/ddrive_rviz.launch.xml"/>
+  <include file="$(find-pkg-share diff_drive)/launch/ddrive_rviz.launch.xml">
+    <arg name = "view_only" value="$(var view_only)"/>
+  </include>
 
   <gz_spawn_model
       world=""

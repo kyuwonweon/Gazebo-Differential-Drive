@@ -23,23 +23,11 @@
     <gazebo reference="top_caster">
         <mu1>0.0</mu1>
         <mu2>0.0</mu2>
-        <material>
-            <ambient>0</ambient>
-            <diffuse>0</diffuse>
-            <specular>0</specular>
-            <emissive>0</emissive>
-        </material>
     </gazebo>
 
     <gazebo reference="bottom_caster">
         <mu1>0.0</mu1>
         <mu2>0.0</mu2>
-        <material>
-            <ambient>0</ambient>
-            <diffuse>0</diffuse>
-            <specular>0</specular>
-            <emissive>0</emissive>
-        </material>
     </gazebo>
 
 </robot>

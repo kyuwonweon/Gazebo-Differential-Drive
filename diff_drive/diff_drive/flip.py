@@ -11,7 +11,13 @@ from rclpy.node import Node
 
 
 class Flip(Node):
-    """Node to flip the car as it moves back and forth."""
+    """Node to flip the car as it moves back and forth.
+
+    PUBLISHES
+    ----------
+    /publisher (geometry_msgs.msg.Twist)
+        Velocity command for the robot.
+    """
 
     def __init__(self):
         """Initialize flip node."""
@@ -41,7 +47,7 @@ class Flip(Node):
 
 
 def main(args=None):
-    """Spin the node."""
+    """Intialize, spins, and shutds down ros2 node."""
     rclpy.init(args=args)
     node = Flip()
     rclpy.spin(node)
