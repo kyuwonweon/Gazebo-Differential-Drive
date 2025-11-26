@@ -16,7 +16,7 @@ class Flip(Node):
 
     PUBLISHES
     ----------
-    /publisher (geometry_msgs.msg.Twist)
+    cmd_vel (geometry_msgs.msg.Twist)
         Velocity command for the robot.
     """
 

@@ -1,0 +1,1 @@
+Should be using formulas to compute the inertias

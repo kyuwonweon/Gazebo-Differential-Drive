@@ -30,7 +30,8 @@
         </geometry>
     </collision>
     <inertial>
-        <mass value='5'/>
+      <mass value='5'/>
+      <!-- should be using formulas for the inertia based on the parameters-->
         <inertia ixx='0.02' ixy='0' ixz='0' iyy='0.15' iyz='0' izz='0.16'/>
     </inertial> 
 </link>
