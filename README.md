@@ -1,8 +1,7 @@
-# ME495 Embedded Systems Homework 3
+# Gazebo Differential Drive Challenge
 Author: Kyuwon Weon 
 
-Gazebo Differential Drive Challenge
-Goal: create a differential-drive robot that can be simulated in Gazebo and controlled by ROS.
+Goal: Create a differential-drive robot that can be simulated in Gazebo and controlled by ROS.
     The robot flips over it's own axis and continue driving.
     The robot moves through a gazebo world.
 
